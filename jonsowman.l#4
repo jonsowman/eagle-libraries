@@ -8334,6 +8334,8 @@ package type OT</description>
 <pad name="P$1" x="1.85" y="-3.7" drill="1.1"/>
 <pad name="P$2" x="-1.85" y="-5" drill="1.1" rot="R90"/>
 <pad name="P$3" x="1.85" y="-9.7" drill="1.1" rot="R90"/>
+<hole x="0" y="-4" drill="1.1"/>
+<hole x="0" y="-10" drill="1.1"/>
 </package>
 </packages>
 <symbols>

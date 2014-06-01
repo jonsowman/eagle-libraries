@@ -8781,17 +8781,21 @@ package type OT</description>
 <text x="-6.604" y="8.382" size="1.778" layer="95">MINI_SWD</text>
 </symbol>
 <symbol name="25MM_AUDIO_3POL">
-<wire x1="0" y1="2.54" x2="-7.62" y2="2.54" width="1.27" layer="94"/>
-<wire x1="0" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="0" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="0" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <text x="-7.62" y="5.08" size="1.778" layer="95">&gt;NAME</text>
-<pin name="PIN" x="7.62" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="TIP" x="7.62" y="2.54" visible="pin" length="short" rot="R180"/>
 <pin name="RING" x="7.62" y="0" visible="pin" length="short" rot="R180"/>
 <pin name="SHIELD" x="7.62" y="-2.54" visible="pin" length="short" rot="R180"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="0" y2="0" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>

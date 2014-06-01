@@ -8331,9 +8331,9 @@ package type OT</description>
 <wire x1="2" y1="-1.5" x2="2.5" y2="-1.5" width="0.127" layer="51"/>
 <wire x1="-2" y1="0" x2="-2" y2="-1.5" width="0.127" layer="51"/>
 <wire x1="2" y1="0" x2="2" y2="-1.5" width="0.127" layer="51"/>
-<pad name="P$1" x="1.85" y="-3.7" drill="1.1"/>
-<pad name="P$2" x="-1.85" y="-5" drill="1.1" rot="R90"/>
-<pad name="P$3" x="1.85" y="-9.7" drill="1.1" rot="R90"/>
+<pad name="SHIELD" x="1.85" y="-3.7" drill="1.1"/>
+<pad name="RING" x="-1.85" y="-5" drill="1.1" rot="R90"/>
+<pad name="TIP" x="1.85" y="-9.7" drill="1.1" rot="R90"/>
 <hole x="0" y="-4" drill="1.1"/>
 <hole x="0" y="-10" drill="1.1"/>
 </package>
