@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.5.0">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -9261,6 +9261,12 @@ package type OT</description>
 <wire x1="-10.16" y1="-17.78" x2="-10.16" y2="35.56" width="0.254" layer="94"/>
 <text x="-5.08" y="35.56" size="1.778" layer="97">&gt;NAME</text>
 </symbol>
+<symbol name="DHT22">
+<pin name="VCC" x="0" y="5.08" length="middle" rot="R270"/>
+<pin name="GND" x="0" y="-30.48" length="middle" rot="R90"/>
+<pin name="DATA" x="10.16" y="-10.16" length="middle" rot="R180"/>
+<pin name="NC" x="10.16" y="-15.24" length="middle" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="13MM_DC_JACK">
@@ -9983,7 +9989,39 @@ End launch SMA connector. The paste layer has been removed so that the connector
 <gate name="G$1" symbol="SSD1306_DISPLAY_DRV" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="096_INCH_MONOCHROME_DISP">
+<connects>
+<connect gate="G$1" pin="BS0" pad="P$10"/>
+<connect gate="G$1" pin="BS1" pad="P$11"/>
+<connect gate="G$1" pin="BS2" pad="P$12"/>
+<connect gate="G$1" pin="C1N" pad="P$5"/>
+<connect gate="G$1" pin="C1P" pad="P$4"/>
+<connect gate="G$1" pin="C2N" pad="P$3"/>
+<connect gate="G$1" pin="C2P" pad="P$2"/>
+<connect gate="G$1" pin="CS#" pad="P$13"/>
+<connect gate="G$1" pin="D0" pad="P$18"/>
+<connect gate="G$1" pin="D1" pad="P$19"/>
+<connect gate="G$1" pin="D2" pad="P$20"/>
+<connect gate="G$1" pin="D3" pad="P$21"/>
+<connect gate="G$1" pin="D4" pad="P$22"/>
+<connect gate="G$1" pin="D5" pad="P$23"/>
+<connect gate="G$1" pin="D6" pad="P$24"/>
+<connect gate="G$1" pin="D7" pad="P$25"/>
+<connect gate="G$1" pin="DC#" pad="P$15"/>
+<connect gate="G$1" pin="ERD#" pad="P$17"/>
+<connect gate="G$1" pin="IREF" pad="P$26"/>
+<connect gate="G$1" pin="NC" pad="P$1"/>
+<connect gate="G$1" pin="NC1" pad="P$7"/>
+<connect gate="G$1" pin="NC2" pad="P$30"/>
+<connect gate="G$1" pin="RES#" pad="P$14"/>
+<connect gate="G$1" pin="RW#" pad="P$16"/>
+<connect gate="G$1" pin="VBAT" pad="P$6"/>
+<connect gate="G$1" pin="VCC" pad="P$28"/>
+<connect gate="G$1" pin="VCOMH" pad="P$27"/>
+<connect gate="G$1" pin="VDD" pad="P$9"/>
+<connect gate="G$1" pin="VLSS" pad="P$29"/>
+<connect gate="G$1" pin="VSS" pad="P$8"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

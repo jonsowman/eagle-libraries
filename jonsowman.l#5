@@ -8687,6 +8687,10 @@ package type OT</description>
 <wire x1="24.4" y1="3" x2="19.4" y2="0" width="0.127" layer="51"/>
 </package>
 <package name="DHT22">
+<wire x1="3.85" y1="7.55" x2="-3.85" y2="7.55" width="0.127" layer="21"/>
+<wire x1="-3.85" y1="7.55" x2="-3.85" y2="-7.55" width="0.127" layer="21"/>
+<wire x1="-3.85" y1="-7.55" x2="3.85" y2="-7.55" width="0.127" layer="21"/>
+<wire x1="3.85" y1="-7.55" x2="3.85" y2="7.55" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
