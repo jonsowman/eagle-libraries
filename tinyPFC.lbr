@@ -4224,6 +4224,22 @@ Source: http://www.fairchildsemi.com/ds/MO/MOC3043-M.pdf</description>
 <wire x1="-1" y1="0" x2="-5.5" y2="0" width="0.127" layer="21"/>
 <wire x1="1" y1="0" x2="5.5" y2="0" width="0.127" layer="21"/>
 </package>
+<package name="BULGIN_PX0580_IEC">
+<hole x="-20" y="9.65" drill="3.4"/>
+<hole x="20" y="9.65" drill="3.4"/>
+<pad name="E" x="0" y="0" drill="1.65" diameter="3" shape="octagon"/>
+<pad name="L" x="9.14" y="0" drill="1.65" diameter="3" shape="octagon"/>
+<pad name="N" x="-9.14" y="0" drill="1.65" diameter="3" shape="octagon"/>
+<wire x1="-25" y1="18.35" x2="-22" y2="18.35" width="0.127" layer="51"/>
+<wire x1="-22" y1="18.35" x2="22" y2="18.35" width="0.127" layer="51"/>
+<wire x1="22" y1="18.35" x2="25" y2="18.35" width="0.127" layer="51"/>
+<wire x1="25" y1="18.35" x2="25" y2="-9.05" width="0.127" layer="51"/>
+<wire x1="25" y1="-9.05" x2="-25" y2="-9.05" width="0.127" layer="51"/>
+<wire x1="-25" y1="-9.05" x2="-25" y2="18.35" width="0.127" layer="51"/>
+<wire x1="-22" y1="18.35" x2="-22" y2="21.55" width="0.127" layer="51"/>
+<wire x1="-22" y1="21.55" x2="22" y2="21.55" width="0.127" layer="51"/>
+<wire x1="22" y1="21.55" x2="22" y2="18.35" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SWITCH-DPDT">
@@ -4516,6 +4532,15 @@ Source: http://www.fairchildsemi.com/ds/MO/MOC3043-M.pdf</description>
 <wire x1="2.54" y1="-5.08" x2="2.54" y2="-7.62" width="0.254" layer="94" curve="180"/>
 <wire x1="2.54" y1="-7.62" x2="2.54" y2="-10.16" width="0.254" layer="94" curve="180"/>
 <wire x1="2.54" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+</symbol>
+<symbol name="MAINS_IEC">
+<pin name="L" x="5.08" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="N" x="5.08" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="E" x="5.08" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<wire x1="0" y1="7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5058,6 +5083,23 @@ Source: http://www.fairchildsemi.com/ds/MO/MOC3043-M.pdf</description>
 <connects>
 <connect gate="G$1" pin="NEG" pad="P$1"/>
 <connect gate="G$1" pin="POS" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BULGIN_PX0580_IEC_C14">
+<gates>
+<gate name="G$1" symbol="MAINS_IEC" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="BULGIN_PX0580_IEC">
+<connects>
+<connect gate="G$1" pin="E" pad="E"/>
+<connect gate="G$1" pin="L" pad="L"/>
+<connect gate="G$1" pin="N" pad="N"/>
 </connects>
 <technologies>
 <technology name=""/>

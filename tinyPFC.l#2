@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -4217,6 +4217,28 @@ Source: http://www.fairchildsemi.com/ds/MO/MOC3043-M.pdf</description>
 <wire x1="9" y1="2.5" x2="9" y2="-2.5" width="0.127" layer="21"/>
 <wire x1="9" y1="-2.5" x2="-9" y2="-2.5" width="0.127" layer="21"/>
 <wire x1="-9" y1="-2.5" x2="-9" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-1" y1="1.5" x2="-1" y2="0" width="0.127" layer="21"/>
+<wire x1="-1" y1="0" x2="-1" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="1" y1="1.5" x2="1" y2="0" width="0.127" layer="21"/>
+<wire x1="1" y1="0" x2="1" y2="-1.5" width="0.127" layer="21"/>
+<wire x1="-1" y1="0" x2="-5.5" y2="0" width="0.127" layer="21"/>
+<wire x1="1" y1="0" x2="5.5" y2="0" width="0.127" layer="21"/>
+</package>
+<package name="BULGIN_PX0580_IEC">
+<hole x="-20" y="9.65" drill="3.4"/>
+<hole x="20" y="9.65" drill="3.4"/>
+<pad name="E" x="0" y="0" drill="1.65" diameter="3" shape="octagon"/>
+<pad name="L" x="9.14" y="0" drill="1.65" diameter="3" shape="octagon"/>
+<pad name="N" x="-9.14" y="0" drill="1.65" diameter="3" shape="octagon"/>
+<wire x1="-25" y1="18.35" x2="-22" y2="18.35" width="0.127" layer="51"/>
+<wire x1="-22" y1="18.35" x2="22" y2="18.35" width="0.127" layer="51"/>
+<wire x1="22" y1="18.35" x2="25" y2="18.35" width="0.127" layer="51"/>
+<wire x1="25" y1="18.35" x2="25" y2="-13" width="0.127" layer="51"/>
+<wire x1="25" y1="-13" x2="-25" y2="-13" width="0.127" layer="51"/>
+<wire x1="-25" y1="-13" x2="-25" y2="18.35" width="0.127" layer="51"/>
+<wire x1="-22" y1="18.35" x2="-22" y2="21.55" width="0.127" layer="51"/>
+<wire x1="-22" y1="21.55" x2="22" y2="21.55" width="0.127" layer="51"/>
+<wire x1="22" y1="21.55" x2="22" y2="18.35" width="0.127" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -4510,6 +4532,15 @@ Source: http://www.fairchildsemi.com/ds/MO/MOC3043-M.pdf</description>
 <wire x1="2.54" y1="-5.08" x2="2.54" y2="-7.62" width="0.254" layer="94" curve="180"/>
 <wire x1="2.54" y1="-7.62" x2="2.54" y2="-10.16" width="0.254" layer="94" curve="180"/>
 <wire x1="2.54" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
+</symbol>
+<symbol name="MAINS_IEC">
+<pin name="L" x="5.08" y="5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="N" x="5.08" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="E" x="5.08" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<wire x1="0" y1="7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -5036,6 +5067,22 @@ Source: http://www.fairchildsemi.com/ds/MO/MOC3043-M.pdf</description>
 <connect gate="G$1" pin="SEC1-" pad="SEC1-"/>
 <connect gate="G$1" pin="SEC2+" pad="SEC2+"/>
 <connect gate="G$1" pin="SEC2-" pad="SEC2-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EPCOS_X2Y2_15MM">
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="EPCOS_X2Y2_15MM">
+<connects>
+<connect gate="G$1" pin="NEG" pad="P$1"/>
+<connect gate="G$1" pin="POS" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
