@@ -9072,6 +9072,7 @@ package type OT</description>
 <wire x1="5.25" y1="2.35" x2="5.25" y2="-2.35" width="0.127" layer="21"/>
 <wire x1="5.25" y1="-2.35" x2="-5.25" y2="-2.35" width="0.127" layer="21"/>
 <wire x1="-5.25" y1="-2.35" x2="-5.25" y2="2.35" width="0.127" layer="21"/>
+<rectangle x1="-5.2" y1="1.8" x2="5.2" y2="2.3" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -10629,14 +10630,9 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </deviceset>
 <deviceset name="HORIZ_WEURTH_TBLK">
 <gates>
-<gate name="G$1" symbol="45DEG_WEURTH_TERMBLK" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="HORIZ_WEURTH_TERMBLK">
-<connects>
-<connect gate="G$1" pin="T1" pad="2"/>
-<connect gate="G$1" pin="T2" pad="3"/>
-</connects>
+<device name="">
 <technologies>
 <technology name=""/>
 </technologies>

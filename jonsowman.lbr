@@ -10628,7 +10628,7 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </device>
 </devices>
 </deviceset>
-<deviceset name="SWD_PTH_SHROUD">
+<deviceset name="SWD_PTH_SHROUD" prefix="H">
 <gates>
 <gate name="G$1" symbol="SWD_10PIN" x="0" y="0"/>
 </gates>
@@ -10652,7 +10652,7 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </device>
 </devices>
 </deviceset>
-<deviceset name="SPST_B3U">
+<deviceset name="SPST_B3U" prefix="S">
 <gates>
 <gate name="G$1" symbol="SWITCH_SPST_NO" x="0" y="0"/>
 </gates>
@@ -10668,7 +10668,7 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </device>
 </devices>
 </deviceset>
-<deviceset name="25MM_AUDIO_3POL">
+<deviceset name="25MM_AUDIO_3POL" prefix="H">
 <gates>
 <gate name="G$1" symbol="25MM_AUDIO_3POL" x="0" y="0"/>
 </gates>

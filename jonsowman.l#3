@@ -10628,18 +10628,6 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </device>
 </devices>
 </deviceset>
-<deviceset name="HORIZ_WEURTH_TBLK">
-<gates>
-<gate name="G$1" symbol="45DEG_WEURTH_TERMBLK" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="HORIZ_WEURTH_TERMBLK">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="SWD_PTH_SHROUD">
 <gates>
 <gate name="G$1" symbol="SWD_10PIN" x="0" y="0"/>
@@ -11110,9 +11098,15 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </deviceset>
 <deviceset name="HORIZ_WEURTH_TBLK_3">
 <gates>
+<gate name="G$1" symbol="TERMBLK_3" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="HORIZ_WEURTH_TERMBLK">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

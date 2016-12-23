@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -9072,6 +9072,7 @@ package type OT</description>
 <wire x1="5.25" y1="2.35" x2="5.25" y2="-2.35" width="0.127" layer="21"/>
 <wire x1="5.25" y1="-2.35" x2="-5.25" y2="-2.35" width="0.127" layer="21"/>
 <wire x1="-5.25" y1="-2.35" x2="-5.25" y2="2.35" width="0.127" layer="21"/>
+<rectangle x1="-5.2" y1="1.8" x2="5.2" y2="2.3" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -10633,10 +10634,6 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </gates>
 <devices>
 <device name="" package="HORIZ_WEURTH_TERMBLK">
-<connects>
-<connect gate="G$1" pin="T1" pad="2"/>
-<connect gate="G$1" pin="T2" pad="3"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -11116,6 +11113,25 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </gates>
 <devices>
 <device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TC74_TO220-5">
+<gates>
+<gate name="G$1" symbol="TC74_I2CTEMPSENSOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TO220-5">
+<connects>
+<connect gate="G$1" pin="GND" pad="3"/>
+<connect gate="G$1" pin="NC" pad="1"/>
+<connect gate="G$1" pin="SCL" pad="4"/>
+<connect gate="G$1" pin="SDA" pad="2"/>
+<connect gate="G$1" pin="VDD" pad="5"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
