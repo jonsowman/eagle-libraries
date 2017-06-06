@@ -9148,13 +9148,13 @@ SOT340-1 / JEDEC MO-150AG</description>
 <package name="ALPS-SSSS811101">
 <hole x="-1.5" y="0" drill="0.9"/>
 <hole x="1.5" y="0" drill="0.9"/>
-<smd name="P$1" x="-3.65" y="1.1" dx="1" dy="0.8" layer="1"/>
-<smd name="P$2" x="-3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
-<smd name="P$3" x="3.65" y="1.1" dx="1" dy="0.8" layer="1"/>
-<smd name="P$4" x="3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
-<smd name="P$5" x="-2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
-<smd name="P$6" x="0.75" y="1.75" dx="0.7" dy="1.5" layer="1"/>
-<smd name="P$7" x="2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<smd name="GND@1" x="-3.65" y="1.1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND@2" x="-3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND@3" x="3.65" y="1.1" dx="1" dy="0.8" layer="1"/>
+<smd name="GND@4" x="3.65" y="-1.1" dx="1" dy="0.8" layer="1"/>
+<smd name="NO" x="-2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<smd name="C" x="0.75" y="1.75" dx="0.7" dy="1.5" layer="1"/>
+<smd name="NC" x="2.25" y="1.75" dx="0.7" dy="1.5" layer="1"/>
 <wire x1="-3" y1="1.6" x2="3" y2="1.6" width="0.127" layer="51"/>
 <wire x1="3" y1="1.6" x2="3" y2="-1.6" width="0.127" layer="51"/>
 <wire x1="3" y1="-1.6" x2="-3" y2="-1.6" width="0.127" layer="51"/>
@@ -10117,16 +10117,13 @@ SOT340-1 / JEDEC MO-150AG</description>
 <text x="-5.08" y="8.382" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 <symbol name="ALPS-SSSS811101">
-<pin name="C" x="-10.16" y="0" visible="off" length="middle"/>
-<pin name="NC" x="10.16" y="2.54" visible="off" length="middle" rot="R180"/>
+<pin name="C" x="-7.62" y="0" visible="off" length="short"/>
+<pin name="NC" x="2.54" y="0" visible="off" length="short" rot="R180"/>
 <circle x="-5.08" y="0" radius="0.71841875" width="0.254" layer="94"/>
-<circle x="5.08" y="2.54" radius="0.71841875" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="0" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<pin name="NO" x="10.16" y="-2.54" visible="off" length="middle" rot="R180"/>
-<pin name="G1" x="10.16" y="-7.62" visible="off" length="middle" rot="R180"/>
-<pin name="G2" x="10.16" y="-10.16" visible="off" length="middle" rot="R180"/>
-<pin name="G3" x="10.16" y="-12.7" visible="off" length="middle" rot="R180"/>
-<pin name="G4" x="10.16" y="-15.24" visible="off" length="middle" rot="R180"/>
+<circle x="0" y="0" radius="0.71841875" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="0" y2="2.54" width="0.254" layer="94"/>
+<pin name="NO" x="2.54" y="-2.54" visible="off" length="short" rot="R180"/>
+<pin name="GND" x="2.54" y="-5.08" visible="off" length="short" direction="pwr" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -11338,9 +11335,16 @@ End launch SMA connector. The paste layer has been removed so that the connector
 </deviceset>
 <deviceset name="ALPS-SSSS811101">
 <gates>
+<gate name="G$1" symbol="ALPS-SSSS811101" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="ALPS-SSSS811101">
+<connects>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="GND" pad="GND@1 GND@2 GND@3 GND@4"/>
+<connect gate="G$1" pin="NC" pad="NC"/>
+<connect gate="G$1" pin="NO" pad="NO"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
