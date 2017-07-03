@@ -14015,6 +14015,11 @@ SOT340-1 / JEDEC MO-150AG</description>
 <smd name="P$6" x="-0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
 <smd name="P$7" x="0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
 <smd name="P$8" x="0.75" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="PAD" x="0" y="0" dx="1.6" dy="0.9" layer="1"/>
+<wire x1="-1.05" y1="1.05" x2="1.05" y2="1.05" width="0.3048" layer="51"/>
+<wire x1="1.05" y1="1.05" x2="1.05" y2="-1.05" width="0.3048" layer="51"/>
+<wire x1="1.05" y1="-1.05" x2="-1.05" y2="-1.05" width="0.3048" layer="51"/>
+<wire x1="-1.05" y1="-1.05" x2="-1.05" y2="1.05" width="0.3048" layer="51"/>
 </package>
 </packages>
 <symbols>

@@ -14007,15 +14007,19 @@ SOT340-1 / JEDEC MO-150AG</description>
 <wire x1="4.25" y1="2" x2="4.25" y2="-2" width="0.127" layer="51"/>
 </package>
 <package name="TPX6125X">
-<smd name="P$1" x="-0.75" y="0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$2" x="-0.25" y="0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$3" x="0.25" y="0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$4" x="0.75" y="0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$5" x="-0.7" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$6" x="-0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$7" x="0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$8" x="0.75" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
-<smd name="P$9" x="0" y="0" dx="1.6" dy="0.9" layer="1"/>
+<smd name="8" x="-0.75" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="7" x="-0.25" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="6" x="0.25" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="5" x="0.75" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="1" x="-0.7" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="2" x="-0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="3" x="0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="4" x="0.75" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="PAD" x="0" y="0" dx="1.6" dy="0.9" layer="1"/>
+<wire x1="-1.05" y1="1.05" x2="1.05" y2="1.05" width="0.3048" layer="51"/>
+<wire x1="1.05" y1="1.05" x2="1.05" y2="-1.05" width="0.3048" layer="51"/>
+<wire x1="1.05" y1="-1.05" x2="-1.05" y2="-1.05" width="0.3048" layer="51"/>
+<wire x1="-1.05" y1="-1.05" x2="-1.05" y2="1.05" width="0.3048" layer="51"/>
 </package>
 </packages>
 <symbols>
