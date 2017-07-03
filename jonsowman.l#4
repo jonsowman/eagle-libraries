@@ -14028,7 +14028,7 @@ SOT340-1 / JEDEC MO-150AG</description>
 <wire x1="3.65" y1="2.15" x2="3.65" y2="-2.15" width="0.3048" layer="51"/>
 <wire x1="3.65" y1="-2.15" x2="-3.65" y2="-2.15" width="0.3048" layer="51"/>
 <wire x1="-3.65" y1="-2.15" x2="-3.65" y2="2.15" width="0.3048" layer="51"/>
-<text x="2.54" y="3.81" size="1.27" layer="21" font="vector" ratio="13" rot="R180">&gt;NAME</text>
+<text x="2.54" y="3.81" size="1.27" layer="25" font="vector" ratio="13" rot="R180">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
