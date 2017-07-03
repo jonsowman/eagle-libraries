@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.3.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -13994,6 +13994,33 @@ SOT340-1 / JEDEC MO-150AG</description>
 <rectangle x1="2.371725" y1="5.197475" x2="2.524125" y2="5.203825" layer="21"/>
 <rectangle x1="2.574925" y1="5.197475" x2="2.587625" y2="5.203825" layer="21"/>
 </package>
+<package name="ALPS-SSSS213202">
+<smd name="C@1" x="0" y="2.15" dx="1.8" dy="1.5" layer="1" rot="R270"/>
+<smd name="NC@1" x="-2.5" y="2.15" dx="1.8" dy="1.5" layer="1" rot="R270"/>
+<smd name="NO@1" x="2.5" y="2.15" dx="1.8" dy="1.5" layer="1" rot="R270"/>
+<smd name="NC@2" x="-2.5" y="-2.15" dx="1.8" dy="1.5" layer="1" rot="R270"/>
+<smd name="C@2" x="0" y="-2.15" dx="1.8" dy="1.5" layer="1" rot="R270"/>
+<smd name="NO@2" x="2.5" y="-2.15" dx="1.8" dy="1.5" layer="1" rot="R270"/>
+<wire x1="-4.25" y1="2" x2="-4.25" y2="-2" width="0.127" layer="21"/>
+<wire x1="4.25" y1="2" x2="4.25" y2="-2" width="0.127" layer="21"/>
+<wire x1="-4.25" y1="2" x2="-4.25" y2="-2" width="0.127" layer="51"/>
+<wire x1="4.25" y1="2" x2="4.25" y2="-2" width="0.127" layer="51"/>
+</package>
+<package name="TPX6125X">
+<smd name="8" x="-0.75" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="7" x="-0.25" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="6" x="0.25" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="5" x="0.75" y="0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="1" x="-0.7" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="2" x="-0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="3" x="0.25" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="4" x="0.75" y="-0.95" dx="0.28" dy="0.5" layer="1"/>
+<smd name="PAD" x="0" y="0" dx="1.6" dy="0.9" layer="1"/>
+<wire x1="-1.05" y1="1.05" x2="1.05" y2="1.05" width="0.3048" layer="51"/>
+<wire x1="1.05" y1="1.05" x2="1.05" y2="-1.05" width="0.3048" layer="51"/>
+<wire x1="1.05" y1="-1.05" x2="-1.05" y2="-1.05" width="0.3048" layer="51"/>
+<wire x1="-1.05" y1="-1.05" x2="-1.05" y2="1.05" width="0.3048" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="13MM_DC_JACK">
@@ -14964,6 +14991,21 @@ SOT340-1 / JEDEC MO-150AG</description>
 <pin name="NC" x="5.08" y="2.54" visible="pad" length="short" rot="R180"/>
 <pin name="NO" x="5.08" y="-2.54" visible="pad" length="short" rot="R180"/>
 <wire x1="-2.54" y1="0" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="TPS_6125X">
+<pin name="L" x="-12.7" y="7.62" visible="pin" length="middle"/>
+<pin name="EN" x="-12.7" y="-2.54" visible="pin" length="middle"/>
+<pin name="VIN" x="-12.7" y="2.54" visible="pin" length="middle" direction="pwr"/>
+<pin name="ILIM" x="-12.7" y="-7.62" visible="pin" length="middle"/>
+<pin name="GND" x="-12.7" y="-12.7" visible="pin" length="middle" direction="pwr"/>
+<pin name="VOUT" x="12.7" y="5.08" visible="pin" length="middle" direction="pwr" rot="R180"/>
+<pin name="FB" x="12.7" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="PG" x="12.7" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="10.16" x2="7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-15.24" x2="-7.62" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-15.24" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<text x="-5.588" y="10.668" size="1.778" layer="94">TPS6125x</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -16184,6 +16226,45 @@ End launch SMA connector. The paste layer has been removed so that the connector
 <connect gate="G$1" pin="GND" pad="GND@1 GND@2 GND@3 GND@4"/>
 <connect gate="G$1" pin="NC" pad="NC"/>
 <connect gate="G$1" pin="NO" pad="NO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ALPS-SSSS213202">
+<gates>
+<gate name="G$1" symbol="ALPS_SW_SPDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ALPS-SSSS213202">
+<connects>
+<connect gate="G$1" pin="C" pad="C@1 C@2"/>
+<connect gate="G$1" pin="NC" pad="NC@1 NC@2"/>
+<connect gate="G$1" pin="NO" pad="NO@1 NO@2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS6125X">
+<gates>
+<gate name="G$1" symbol="TPS_6125X" x="0" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="TPX6125X">
+<connects>
+<connect gate="G$1" pin="EN" pad="6"/>
+<connect gate="G$1" pin="FB" pad="3"/>
+<connect gate="G$1" pin="GND" pad="1 PAD"/>
+<connect gate="G$1" pin="ILIM" pad="4"/>
+<connect gate="G$1" pin="L" pad="7"/>
+<connect gate="G$1" pin="PG" pad="5"/>
+<connect gate="G$1" pin="VIN" pad="8"/>
+<connect gate="G$1" pin="VOUT" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
