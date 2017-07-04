@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -14028,7 +14028,7 @@ SOT340-1 / JEDEC MO-150AG</description>
 <wire x1="3.65" y1="2.15" x2="3.65" y2="-2.15" width="0.3048" layer="51"/>
 <wire x1="3.65" y1="-2.15" x2="-3.65" y2="-2.15" width="0.3048" layer="51"/>
 <wire x1="-3.65" y1="-2.15" x2="-3.65" y2="2.15" width="0.3048" layer="51"/>
-<text x="2.54" y="3.81" size="1.27" layer="21" font="vector" ratio="13" rot="R180">&gt;NAME</text>
+<text x="2.54" y="3.81" size="1.27" layer="25" font="vector" ratio="13" rot="R180">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
@@ -15025,6 +15025,17 @@ SOT340-1 / JEDEC MO-150AG</description>
 <text x="-3.048" y="-4.064" size="1.27" layer="95">&gt;VALUE</text>
 <wire x1="0" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
 <wire x1="2.54" y1="0" x2="1.778" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STMPS21X1">
+<pin name="IN" x="-10.16" y="5.08" visible="pin" length="short"/>
+<pin name="EN" x="-10.16" y="0" visible="pin" length="short"/>
+<pin name="GND" x="-10.16" y="-5.08" visible="pin" length="short"/>
+<pin name="OUT" x="7.62" y="2.54" visible="pin" length="short" rot="R180"/>
+<pin name="FAULT" x="7.62" y="-2.54" visible="pin" length="short" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
