@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -14220,6 +14220,24 @@ SOT340-1 / JEDEC MO-150AG</description>
 <hole x="3.175" y="2.54" drill="2.3748"/>
 <text x="-1.27" y="-2.54" size="1.27" layer="25" rot="R90">&gt;name</text>
 </package>
+<package name="ALPS-SSSS223200">
+<pad name="COM1" x="0" y="1.65" drill="0.8" diameter="1.6764"/>
+<pad name="NC1" x="-2.5" y="1.65" drill="0.8" diameter="1.6764"/>
+<pad name="NO1" x="2.5" y="1.65" drill="0.8" diameter="1.6764"/>
+<pad name="NC2" x="-2.5" y="-1.65" drill="0.8" diameter="1.6764"/>
+<pad name="COM2" x="0" y="-1.65" drill="0.8" diameter="1.6764"/>
+<pad name="NO2" x="2.5" y="-1.65" drill="0.8" diameter="1.6764"/>
+<wire x1="-4.5" y1="1.65" x2="4.5" y2="1.65" width="0.127" layer="51"/>
+<wire x1="4.5" y1="1.65" x2="4.5" y2="-1.65" width="0.127" layer="51"/>
+<wire x1="4.5" y1="-1.65" x2="-4.5" y2="-1.65" width="0.127" layer="51"/>
+<wire x1="-4.5" y1="-1.65" x2="-4.5" y2="1.65" width="0.127" layer="51"/>
+<wire x1="-4.5" y1="1.7" x2="-4.5" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="4.5" y1="1.7" x2="4.5" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="3.7" y1="1.7" x2="4.5" y2="1.7" width="0.127" layer="21"/>
+<wire x1="4.5" y1="-1.7" x2="3.7" y2="-1.7" width="0.127" layer="21"/>
+<wire x1="-4.5" y1="1.7" x2="-3.7" y2="1.7" width="0.127" layer="21"/>
+<wire x1="-4.5" y1="-1.7" x2="-3.7" y2="-1.7" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="13MM_DC_JACK">
@@ -15279,6 +15297,21 @@ SOT340-1 / JEDEC MO-150AG</description>
 <circle x="5.842" y="9.144" radius="0.5679" width="0.254" layer="94"/>
 <circle x="4.826" y="3.048" radius="0.5679" width="0.254" layer="94"/>
 <circle x="6.858" y="3.048" radius="0.5679" width="0.254" layer="94"/>
+</symbol>
+<symbol name="SWITCH_DPDT">
+<pin name="COM1" x="-5.08" y="7.62" visible="off" length="short"/>
+<pin name="COM2" x="-5.08" y="-7.62" visible="off" length="short"/>
+<pin name="NC1" x="5.08" y="10.16" visible="off" length="short" rot="R180"/>
+<pin name="NO1" x="5.08" y="5.08" visible="off" length="short" rot="R180"/>
+<pin name="NC2" x="5.08" y="-5.08" visible="off" length="short" rot="R180"/>
+<pin name="NO2" x="5.08" y="-10.16" visible="off" length="short" rot="R180"/>
+<wire x1="-2.54" y1="7.62" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="-5.08" width="0.254" layer="94" style="shortdash"/>
+<wire x1="-2.54" y1="12.7" x2="2.54" y2="12.7" width="0.254" layer="94"/>
+<wire x1="2.54" y1="12.7" x2="2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-12.7" x2="-2.54" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-12.7" x2="-2.54" y2="12.7" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -16635,6 +16668,26 @@ Two variants - one "with legs" (for hads-free fit on PCB) and another "without l
 <connect gate="G$1" pin="VDD" pad="2"/>
 <connect gate="G$1" pin="VPP/MCLR" pad="1"/>
 <connect gate="G$1" pin="VSS(GND)" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ALPS-SSSS223200">
+<gates>
+<gate name="G$1" symbol="SWITCH_DPDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ALPS-SSSS223200">
+<connects>
+<connect gate="G$1" pin="COM1" pad="COM1"/>
+<connect gate="G$1" pin="COM2" pad="COM2"/>
+<connect gate="G$1" pin="NC1" pad="NC1"/>
+<connect gate="G$1" pin="NC2" pad="NC2"/>
+<connect gate="G$1" pin="NO1" pad="NO1"/>
+<connect gate="G$1" pin="NO2" pad="NO2"/>
 </connects>
 <technologies>
 <technology name=""/>
