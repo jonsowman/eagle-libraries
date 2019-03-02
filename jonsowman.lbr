@@ -35,16 +35,16 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
@@ -26702,6 +26702,17 @@ SOT340-1 / JEDEC MO-150AG</description>
 <wire x1="9" y1="0" x2="8.25" y2="0" width="0.254" layer="21"/>
 <wire x1="9" y1="8.75" x2="9" y2="9.75" width="0.254" layer="51" curve="-180"/>
 </package>
+<package name="KSS2XXXX_TACTILE_SIDE">
+<smd name="C1" x="-2.95" y="0" dx="1.7" dy="3.7" layer="1"/>
+<smd name="C2" x="2.95" y="0" dx="1.7" dy="3.7" layer="1"/>
+<wire x1="-3.5" y1="1.75" x2="3.5" y2="1.75" width="0.1" layer="51"/>
+<wire x1="3.5" y1="1.75" x2="3.5" y2="-1.75" width="0.1" layer="51"/>
+<wire x1="3.5" y1="-1.75" x2="-3.5" y2="-1.75" width="0.1" layer="51"/>
+<wire x1="-3.5" y1="-1.75" x2="-3.5" y2="1.75" width="0.1" layer="51"/>
+<wire x1="-1.25" y1="-1.8" x2="-1.25" y2="-2.55" width="0.1" layer="51"/>
+<wire x1="-1.25" y1="-2.55" x2="1.25" y2="-2.55" width="0.1" layer="51"/>
+<wire x1="1.25" y1="-2.55" x2="1.25" y2="-1.8" width="0.1" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="13MM_DC_JACK">
@@ -29278,6 +29289,22 @@ Two variants - one "with legs" (for hads-free fit on PCB) and another "without l
 <connect gate="G$1" pin="UART_RX" pad="UART_RX"/>
 <connect gate="G$1" pin="UART_TX" pad="UART_TX"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KSS2XXXX_TACTILE_SMD">
+<gates>
+<gate name="G$1" symbol="SWITCH_SPST_NO" x="10.16" y="-5.08"/>
+</gates>
+<devices>
+<device name="" package="KSS2XXXX_TACTILE_SIDE">
+<connects>
+<connect gate="G$1" pin="P$1" pad="C1"/>
+<connect gate="G$1" pin="P$2" pad="C2"/>
 </connects>
 <technologies>
 <technology name=""/>
